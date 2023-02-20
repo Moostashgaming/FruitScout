@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundNavyBlue"
+    tools:context=".ActivityTitleScreen">
+
+    <Button
+        android:id="@+id/retrieveDataButton"
+        android:layout_width="600dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/safetyGreen"
+        android:focusable="true"
+        android:fontFamily="@font/batmfa__"
+        android:text="@string/retrieve_data_button_text"
+        android:textColor="@color/blueOne"
+        android:textSize="70sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsButton" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="600dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="368dp"
+        android:backgroundTint="@color/safetyGreen"
+        android:focusable="true"
+        android:fontFamily="@font/batmfa__"
+        android:text="@string/start_button_text"
+        android:textColor="@color/blueOne"
+        android:textSize="70sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="600dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/safetyGreen"
+        android:focusable="true"
+        android:fontFamily="@font/batmfa__"
+        android:text="@string/settings_button_text"
+        android:textColor="@color/blueOne"
+        android:textSize="70sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startButton" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="776dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="92dp"
+        android:clickable="false"
+        android:fitsSystemWindows="false"
+        android:focusable="true"
+        android:fontFamily="@font/batmfa__"
+        android:text="@string/fruitscout_text"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/safetyGreen"
+        android:textColorHighlight="@color/safetyGreen"
+        android:textColorHint="@color/safetyGreen"
+        android:textColorLink="@color/safetyGreen"
+        android:textSize="95sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/versionTextView"
+        android:layout_width="508dp"
+        android:layout_height="76dp"
+        android:text="@string/version_number"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="57sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

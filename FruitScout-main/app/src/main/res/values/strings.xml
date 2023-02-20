@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FruitScout (Alpha)</string>
+    <string name="version_number">v0.0.0</string>
+    <string name="title_activity_two">ActivityTwo</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next_button_text">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_match_scouting_screen">match scouting screen</string>
+    <string name="TextView_Testing">One Two three four five six seven eight nine ten</string>
+    <string name="Test_eighty_character_limit">wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</string>
+    <string name="Test_40_characters">wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</string>
+    <string name="retrieve_data_button_text">Retrieve Data</string>
+    <string name="fruitscout_text">FruitScout</string>
+    <string name="credits_text">Credits</string>
+    <string name="creator_text">Creator</string>
+    <string name="select_scouting_type_text">Please Select Scouting Type</string>
+    <string name="match_scouting_button_text">Match Scouting</string>
+    <string name="pit_scouting_button_text">Pit Scouting</string>
+    <string name="start_button_text">Scout</string>
+    <string name="settings_button_text">Settings</string>
+    <string name="back_button_text">Back</string>
+    <string name="placeholder_text">Placeholder</string>
+    <string name="title_activity_settings_screen">SettingsScreen</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="Content_Description_Settings">Scroll Area Containing Settings</string>
+    <string name="pit_scouting_questions_text">Pit Scouting Questions</string>
+    <string name="enter_question_hinttext">Enter Question</string>
+    <string name="slider_question_text">Slider</string>
+    <string name="short_response_text">Short Response</string>
+    <string name="multi_choice_text">Multiple Choice</string>
+</resources>

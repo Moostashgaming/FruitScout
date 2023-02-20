@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/relativelayout_border">
+
+    <TextView
+        android:id="@+id/typeCheckboxTextView"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:layout_below="@id/typeShortResponseTextView"
+        android:layout_toEndOf="@id/questionTypeChipGroup"
+        android:fontFamily="@font/batmfa__"
+        android:gravity="center|left"
+        android:text="@string/multi_choice_text"
+        android:textColor="@color/blueOne"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/enterQuestionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/edittext_border"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:fontFamily="@font/batmfa__"
+        android:hint="@string/enter_question_hinttext"
+        android:importantForAutofill="no"
+        android:inputType="textLongMessage|textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/backgroundNavyBlue"
+        android:textSize="30sp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/questionTypeChipGroup"
+        android:layout_width="74dp"
+        android:layout_height="197dp"
+        android:layout_below="@id/enterQuestionEditText"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/typeSliderChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroundNavyBlue"
+            app:chipIcon="@drawable/blue_circle"
+            app:chipSurfaceColor="@color/blueOne" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/typeShortResponseChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIcon="@drawable/blue_circle"
+            app:chipSurfaceColor="@color/blueOne" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/typeCheckboxChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipIcon="@drawable/blue_circle"
+            app:chipSurfaceColor="@color/blueOne" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/typeSliderTextView"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:layout_below="@id/enterQuestionEditText"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/questionTypeChipGroup"
+        android:fontFamily="@font/batmfa__"
+        android:gravity="center|left"
+        android:text="@string/slider_question_text"
+        android:textColor="@color/blueOne"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/typeShortResponseTextView"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:layout_below="@id/typeSliderTextView"
+        android:layout_toEndOf="@id/questionTypeChipGroup"
+        android:fontFamily="@font/batmfa__"
+        android:gravity="center|left"
+        android:text="@string/short_response_text"
+        android:textColor="@color/blueOne"
+        android:textSize="25sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_below="@id/typeCheckboxTextView"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/edittext_border"
+        android:contentDescription="@string/Content_Description_Settings">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+</RelativeLayout>

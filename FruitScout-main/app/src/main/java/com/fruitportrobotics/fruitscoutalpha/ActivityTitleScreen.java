@@ -51,4 +51,9 @@ public class ActivityTitleScreen extends AppCompatActivity {
             this.finish();
         }
     }
+
+    // Creates a question from raw question data for storage
+    public Question quesCreate(String content, int type) {
+        return new Question(type, content);
+    }
 }

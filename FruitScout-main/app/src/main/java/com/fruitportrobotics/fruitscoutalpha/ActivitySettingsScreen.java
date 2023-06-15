@@ -26,10 +26,6 @@ public class ActivitySettingsScreen extends ActivityTitleScreen {
 
         Button backButtonSettings = findViewById(R.id.backButtonSettings);
         Button addQuestionButton = findViewById(R.id.addQuestionButton);
-        ChipGroup questionTypeChipGroup = findViewById(R.id.questionTypeChipGroup);
-        Chip typeSliderChip = findViewById(R.id.typeSliderChip);
-        Chip typeShortResponseChip = findViewById(R.id.typeShortResponseChip);
-        Chip typeCheckboxChip = findViewById(R.id.typeCheckboxChip);
 
         addQuestionButton.setOnClickListener(view -> {
 
@@ -54,7 +50,7 @@ public class ActivitySettingsScreen extends ActivityTitleScreen {
         });
 
         backButtonSettings.setOnClickListener(view ->{
-            switchActivity(ActivityTitleScreen.class, false);
+            switchActivity(ActivityTitleScreen.class, true);
         });
 
 //        questionTypeChipGroup.setOnClickListener(view ->{

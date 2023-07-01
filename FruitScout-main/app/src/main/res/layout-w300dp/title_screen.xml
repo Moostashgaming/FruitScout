@@ -55,7 +55,7 @@
         android:textColorHighlight="@color/safetyGreen"
         android:textColorHint="@color/safetyGreen"
         android:textColorLink="@color/safetyGreen"
-        android:textSize="50sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

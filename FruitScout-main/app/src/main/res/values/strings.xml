@@ -34,4 +34,7 @@
     <string name="slider_question_text">Slider</string>
     <string name="short_response_text">Short Response</string>
     <string name="multi_choice_text">Multiple Choice</string>
+    <string name="question_id_hinttxt">Question Id</string>
+    <string name="slider_range_hinttxt">Slider Range?</string>
+    <string name="done_button_text">Done</string>
 </resources>

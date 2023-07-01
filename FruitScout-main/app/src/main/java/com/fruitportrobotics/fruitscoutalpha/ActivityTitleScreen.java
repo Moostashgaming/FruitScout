@@ -53,7 +53,7 @@ public class ActivityTitleScreen extends AppCompatActivity {
     }
 
     // Creates a question from raw question data for storage
-    public Question quesCreate(String content, int type) {
-        return new Question(type, content);
+    static Data.Question quesCreate(String id, String content, int type) {
+        return new Data.Question(id, type, content);
     }
 }

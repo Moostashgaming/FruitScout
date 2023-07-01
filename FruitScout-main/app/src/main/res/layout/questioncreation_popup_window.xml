@@ -15,28 +15,41 @@
         android:fontFamily="@font/batmfa__"
         android:gravity="center|left"
         android:text="@string/multi_choice_text"
-        android:textColor="@color/blueOne"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/quesIdEdTxt"
+        android:layout_width="230dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/questionTypeChipGroup"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="175dp"
+        android:background="@drawable/edittextregborder"
+        android:ems="10"
+        android:fontFamily="@font/batmfa__"
+        android:gravity="center"
+        android:hint="@string/question_id_hinttxt"
+        android:inputType="text"
         android:textSize="25sp" />
 
     <EditText
         android:id="@+id/enterQuestionEditText"
-        android:layout_width="match_parent"
+        android:layout_width="360dp"
         android:layout_height="126dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="2dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/quesedittext_border"
         android:cursorVisible="true"
         android:ems="10"
         android:fontFamily="@font/batmfa__"
         android:hint="@string/enter_question_hinttext"
         android:importantForAutofill="no"
+        android:includeFontPadding="true"
         android:inputType="textLongMessage|textPersonName"
         android:textAlignment="center"
-        android:textColor="@color/backgroundNavyBlue"
-        android:textSize="30sp" />
+        android:textSize="31sp" />
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/questionTypeChipGroup"
@@ -54,6 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/backgroundNavyBlue"
+            android:checkable="true"
             app:chipIcon="@drawable/blue_circle"
             app:chipSurfaceColor="@color/blueOne" />
 
@@ -61,6 +75,7 @@
             android:id="@+id/typeShortResponseChip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checkable="true"
             app:chipIcon="@drawable/blue_circle"
             app:chipSurfaceColor="@color/blueOne" />
 
@@ -68,6 +83,7 @@
             android:id="@+id/typeCheckboxChip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checkable="true"
             app:chipIcon="@drawable/blue_circle"
             app:chipSurfaceColor="@color/blueOne" />
     </com.google.android.material.chip.ChipGroup>
@@ -82,26 +98,14 @@
         android:fontFamily="@font/batmfa__"
         android:gravity="center|left"
         android:text="@string/slider_question_text"
-        android:textColor="@color/blueOne"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/typeShortResponseTextView"
-        android:layout_width="320dp"
-        android:layout_height="47dp"
-        android:layout_below="@id/typeSliderTextView"
-        android:layout_toEndOf="@id/questionTypeChipGroup"
-        android:fontFamily="@font/batmfa__"
-        android:gravity="center|left"
-        android:text="@string/short_response_text"
-        android:textColor="@color/blueOne"
         android:textSize="25sp" />
 
     <ScrollView
         android:id="@+id/ScrollView"
-        android:layout_width="378dp"
+        android:layout_width="360dp"
         android:layout_height="219dp"
         android:layout_below="@id/typeCheckboxTextView"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="2dp"
@@ -124,25 +128,36 @@
                 android:ems="10"
                 android:fontFamily="@font/batmfa__"
                 android:gravity="center_horizontal|center_vertical"
-                android:hint="Slider Range?"
+                android:hint="@string/slider_range_hinttxt"
                 android:inputType="numberDecimal"
                 android:paddingLeft="2dp"
-                android:textColor="@color/blueOne"
                 android:textSize="28sp" />
         </RelativeLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/typeShortResponseTextView"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:layout_below="@id/typeSliderTextView"
+        android:layout_toEndOf="@id/questionTypeChipGroup"
+        android:fontFamily="@font/batmfa__"
+        android:gravity="center|left"
+        android:text="@string/short_response_text"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/doneBtnPop"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_below="@id/questionTypeChipGroup"
-        android:layout_alignParentBottom="false"
         android:layout_marginLeft="245dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="@color/blueOne"
+        android:clickable="true"
         android:fontFamily="@font/batmfa__"
-        android:text="Done"
+        android:text="@string/done_button_text"
         android:textColor="@color/outlineGreen"
         android:textSize="23sp"
         app:cornerRadius="8dp" />

@@ -2,34 +2,12 @@ package com.fruitportrobotics.fruitscoutalpha;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
-import androidx.room.Dao;
 import androidx.room.Database;
-import androidx.room.Delete;
 import androidx.room.Entity;
-import androidx.room.Ignore;
-import androidx.room.Insert;
 import androidx.room.PrimaryKey;
-import androidx.room.Query;
 import androidx.room.RoomDatabase;
-import androidx.room.Update;
-
-import java.util.List;
 
 public class Data {
-//     Defines a Database entity with a primary key of id and two columns (context and type)
-//    @Entity
-//    public class Questions {
-//        @PrimaryKey
-//        @NonNull
-//        public String id;
-//
-//        @ColumnInfo(name = "content")
-//        public String content;
-//
-//        @ColumnInfo(name = "type")
-//        public int type;
-//    }
-    // The DAO used for operations with the Database
     @Entity
     public static class Question {
         @ColumnInfo(name = "content")
@@ -39,16 +17,85 @@ public class Data {
         @PrimaryKey
         @NonNull
         String quesId;
-        // Constructor
-        public Question(String id, int type, String content) {
+
+        /**
+         * Slider question attributes (Data class)
+         */
+        @Entity
+        public static class SliderAttrs {
+            @PrimaryKey
+            @NonNull
+            String quesId;
+
+            @ColumnInfo(name = "slider_max")
+            double sliderMaximum;
+
+            @ColumnInfo(name = "slider_min")
+            double sliderMinimum;
+
+            /**
+             * Constructor used for creating attributes to be stored
+             * @param id The id of the question for the attributes to be packaged with
+             * @param sliderMax The maximum range of the slider
+             * @param sliderMin The minimum range of the slider
+             */
+            public SliderAttrs(String id, double sliderMax, double sliderMin) {
+                quesId = id;
+                sliderMaximum = sliderMax;
+                sliderMinimum = sliderMin;
+            }
+
+            public SliderAttrs(){}
+        }
+
+        /**
+         * Multiple choice question attributes (Data Class)
+         */
+        @Entity
+        public static class MultiAttrs {
+            @PrimaryKey
+            @NonNull
+            String quesId;
+
+            /**
+             * Constructor used for creating attributes to be stored
+             * @param id
+             */
+            public MultiAttrs(String id) {
+                quesId = id;
+            }
+
+            public MultiAttrs(){}
+        }
+
+        /**
+         * Short Answer question attributes (Data Class)
+         */
+        @Entity
+        public static class ShortAttrs {
+            @PrimaryKey
+            @NonNull
+            String quesId;
+
+            /**
+             * Constructor used for creating attributes to be stored
+             * @param id
+             */
+            public ShortAttrs(String id) {
+                quesId = id;
+            }
+
+            public ShortAttrs(){}
+        }
+
+        /*Constructor for data storage */
+        public Question(String id, String content, int type) {
             quesType = type;
             quesContent = content;
             quesId = id;
         }
 
-        public Question() {
-
-        }
+        public Question() {}
 
         public static String getString(Data.Question question) {
             return question.quesContent;
@@ -61,35 +108,12 @@ public class Data {
             return question.quesId;
         }
     }
-    @Dao
-    public interface UserDao {
-        @Query("SELECT * FROM question")
-        List<Data.Question> getAll();
 
-        @Query("SELECT * FROM question WHERE quesId IN (:quesIds)")
-        List<Question> loadAllByIds(String[] quesIds);
-
-        @Query("SELECT * FROM question WHERE quesId LIKE :quesId LIMIT 1")
-        Question findByName(String quesId);
-
-//        @Update
-//        Questions update(String id);
-
-        @Insert
-        void insertAll(Question... questions);
-
-        @Delete
-        void delete(Question question);
-    }
-
-    @Database(entities = {Question.class}, version = 1)
+    // Database Definition
+    @Database(entities = {Question.class, Question.SliderAttrs.class, Question.MultiAttrs.class, Question.ShortAttrs.class}, version = 1)
     public static abstract class AppDatabase extends RoomDatabase {
         public abstract UserDao userDao();
+
+        public static final String NAME = "AppDatabase";
     }
-
-//    public Questions QuestionToQuestions(Question question) {
-//        return new Questions;
-//    }
-
-
 }

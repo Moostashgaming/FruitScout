@@ -19,19 +19,21 @@
 
     <EditText
         android:id="@+id/quesIdEdTxt"
-        android:layout_width="230dp"
+        android:layout_width="280dp"
         android:layout_height="48dp"
         android:layout_below="@id/questionTypeChipGroup"
         android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="175dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/edittextregborder"
         android:ems="10"
         android:fontFamily="@font/batmfa__"
         android:gravity="center"
         android:hint="@string/question_id_hinttxt"
         android:inputType="text"
-        android:textSize="25sp" />
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/enterQuestionEditText"
@@ -69,7 +71,9 @@
             android:background="@color/backgroundNavyBlue"
             android:checkable="true"
             app:chipIcon="@drawable/blue_circle"
-            app:chipSurfaceColor="@color/blueOne" />
+            app:chipSurfaceColor="@color/blueOne"
+            app:closeIcon="@drawable/blue_circle"
+            app:closeIconTint="@color/teal_200" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/typeShortResponseChip"
@@ -100,41 +104,6 @@
         android:text="@string/slider_question_text"
         android:textSize="25sp" />
 
-    <ScrollView
-        android:id="@+id/ScrollView"
-        android:layout_width="360dp"
-        android:layout_height="219dp"
-        android:layout_below="@id/typeCheckboxTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="2dp"
-        android:background="@drawable/quesedittext_border"
-        android:contentDescription="@string/Content_Description_Settings">
-
-        <RelativeLayout
-            android:id="@+id/slderQsRelLay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/sldrRngeEdTxt"
-                android:layout_width="300dp"
-                android:layout_height="48dp"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/edittextregborder"
-                android:ems="10"
-                android:fontFamily="@font/batmfa__"
-                android:gravity="center_horizontal|center_vertical"
-                android:hint="@string/slider_range_hinttxt"
-                android:inputType="numberDecimal"
-                android:paddingLeft="2dp"
-                android:textSize="28sp" />
-        </RelativeLayout>
-    </ScrollView>
-
     <TextView
         android:id="@+id/typeShortResponseTextView"
         android:layout_width="320dp"
@@ -145,21 +114,120 @@
         android:gravity="center|left"
         android:text="@string/short_response_text"
         android:textSize="25sp" />
+    <ScrollView
+        android:id="@+id/emptySView"
+        android:layout_width="360dp"
+        android:layout_height="219dp"
+        android:layout_below="@id/typeCheckboxTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/quesedittext_border"
+        android:contentDescription="@string/Content_Description_Settings"
+        android:visibility="visible">
+    </ScrollView>
 
-    <Button
-        android:id="@+id/doneBtnPop"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/questionTypeChipGroup"
-        android:layout_marginLeft="245dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginBottom="4dp"
-        android:backgroundTint="@color/blueOne"
-        android:clickable="true"
-        android:fontFamily="@font/batmfa__"
-        android:text="@string/done_button_text"
-        android:textColor="@color/outlineGreen"
-        android:textSize="23sp"
-        app:cornerRadius="8dp" />
+    <ScrollView
+        android:id="@+id/shortResOpsSView"
+        android:layout_width="360dp"
+        android:layout_height="219dp"
+        android:layout_below="@id/typeCheckboxTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/quesedittext_border"
+        android:contentDescription="@string/Content_Description_Settings"
+        android:visibility="gone">
 
+        <RelativeLayout
+            android:id="@+id/shortQsRLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/multiChoiceOpsSView"
+        android:layout_width="360dp"
+        android:layout_height="219dp"
+        android:layout_below="@id/typeCheckboxTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/quesedittext_border"
+        android:contentDescription="@string/Content_Description_Settings"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/multiQsRLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sliderOpsSView"
+        android:layout_width="360dp"
+        android:layout_height="219dp"
+        android:layout_below="@id/typeCheckboxTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/quesedittext_border"
+        android:contentDescription="@string/Content_Description_Settings"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/slderQsRLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/sldrMinEdTxt"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/sldrMaxEdTxt"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/edittextregborder"
+                android:ems="10"
+                android:fontFamily="@font/batmfa__"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/slider_range_min_hinttxt"
+                android:inputType="numberDecimal"
+                android:paddingLeft="2dp"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/sldrMaxEdTxt"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/edittextregborder"
+                android:ems="10"
+                android:fontFamily="@font/batmfa__"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/slider_range_max_hinttxt"
+                android:inputType="numberDecimal"
+                android:paddingLeft="2dp"
+                android:textSize="28sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

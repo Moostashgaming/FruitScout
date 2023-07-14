@@ -13,11 +13,4 @@ public class ActivityCreditsScreen extends ActivityTitleScreen {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.credits_screen);
     }
-//    // Switch Activity Method (Creates a switchActivityIntent Intent and starts the activity referenced )
-//    public void switchActivity(Class switchTo) {
-//        Intent switchActivityIntent = new Intent(this, switchTo);
-//        startActivity(switchActivityIntent);
-//        // May cause problems
-//        this.finish();
-//    }
 }

@@ -1,0 +1,118 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "823713326dd335fb636fc5d46d4e2dca",
+    "entities": [
+      {
+        "tableName": "Question",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`content` TEXT, `type` INTEGER NOT NULL, `quesId` TEXT NOT NULL, PRIMARY KEY(`quesId`))",
+        "fields": [
+          {
+            "fieldPath": "quesContent",
+            "columnName": "content",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quesType",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "quesId",
+            "columnName": "quesId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "quesId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "SliderAttrs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`quesId` TEXT NOT NULL, `slider_max` REAL NOT NULL, `slider_min` REAL NOT NULL, PRIMARY KEY(`quesId`))",
+        "fields": [
+          {
+            "fieldPath": "quesId",
+            "columnName": "quesId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sliderMaximum",
+            "columnName": "slider_max",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sliderMinimum",
+            "columnName": "slider_min",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "quesId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "MultiAttrs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`quesId` TEXT NOT NULL, PRIMARY KEY(`quesId`))",
+        "fields": [
+          {
+            "fieldPath": "quesId",
+            "columnName": "quesId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "quesId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ShortAttrs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`quesId` TEXT NOT NULL, PRIMARY KEY(`quesId`))",
+        "fields": [
+          {
+            "fieldPath": "quesId",
+            "columnName": "quesId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "quesId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '823713326dd335fb636fc5d46d4e2dca')"
+    ]
+  }
+}

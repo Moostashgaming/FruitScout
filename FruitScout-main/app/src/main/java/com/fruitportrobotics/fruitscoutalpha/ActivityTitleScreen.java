@@ -30,14 +30,9 @@ public class ActivityTitleScreen extends AppCompatActivity {
         // Waits until the button is pressed and then preforms the code in the curly braces
         settingsButton.setOnClickListener(view -> {
             // Switches to ActivitySettingsScreen
-            switchActivity(ActivitySettingsScreen.class, false);
+            switchActivity(ActivitySettingsScreen.class, true);
         });
-        // Listens for the title to be clicked and then preforms code in the curly braces
-        titleTextView.setOnClickListener(view -> {
-            // Switches to ActivityCreditsScreen
-            switchActivity(ActivityCreditsScreen.class, false);
-        });
-        // May be removed, do not edit until certain
+        // TODO: May be removed, do not edit until certain
         dataRetrievalButton.setOnClickListener(view -> {
 
         });
@@ -54,6 +49,6 @@ public class ActivityTitleScreen extends AppCompatActivity {
 
     // Creates a question from raw question data for storage
     static Data.Question quesCreate(String id, String content, int type) {
-        return new Data.Question(id, type, content);
+        return new Data.Question(id, content, type);
     }
 }
